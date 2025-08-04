@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Track Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="track-animation"></div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 0C22.38 0 0 22.38 0 50C0 77.62 22.38 100 50 100C77.62 100 100 77.62 100 50C100 22.38 77.62 0 50 0ZM50 88C29.01 88 12 70.99 12 50C12 29.01 29.01 12 50 12C70.99 12 88 29.01 88 50C88 70.99 70.99 88 50 88Z" fill="#0D47A1"/>
+                    <path d="M40 25H60V75H40V25Z" fill="#FF9800"/>
+                    <path d="M25 40H75V60H25V40Z" fill="#FF9800"/>
+                </svg>
+                <span>Price Track Service</span>
+            </div>
+            <p class="motto">Whatever Drives You, We Deliver!</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <h1>Track Pricing, Drive Success</h1>
+                <p>Your one-stop solution for competitive pricing and market analysis.</p>
+                <a href="#contact" class="cta-button">Get Started Today</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Price Track Service was founded on the principle of clarity and efficiency. In a fast-paced market, having reliable, up-to-date pricing information isn't just an advantage—it's a necessity. We provide the tools and data to keep you ahead of the competition, ensuring your business is always on the right track.</p>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-cards">
+                    <div class="card">
+                        <h3>Competitor Analysis</h3>
+                        <p>Monitor your competitors' pricing strategies in real-time to make informed decisions.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Market Trend Reports</h3>
+                        <p>Receive detailed reports on market trends and pricing fluctuations in your industry.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Dynamic Pricing API</h3>
+                        <p>Integrate our powerful API to automate pricing adjustments based on live market data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                    <div id="form-status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Price Track Service. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
