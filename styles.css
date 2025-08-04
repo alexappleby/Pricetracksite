@@ -1,0 +1,274 @@
+/* --- General Setup & Variables --- */
+:root {
+    --primary-blue: #0D47A1; /* Deep, professional blue */
+    --accent-orange: #FF9800; /* Vibrant, energetic orange */
+    --light-gray: #f4f4f4;
+    --dark-gray: #333;
+    --white: #ffffff;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background-color: var(--white);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Tractor Track Animation --- */
+.track-animation {
+    position: fixed;
+    top: 0;
+    left: 15%; /* Start a bit off-screen to the left */
+    width: 10px;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg width="10" height="40" viewBox="0 0 10 40" xmlns="http://www.w3.org/2000/svg"><rect width="10" height="20" fill="%23e0e0e0"/></svg>');
+    background-repeat: repeat-y;
+    animation: move-track 10s linear infinite;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+@keyframes move-track {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+
+/* --- Header & Footer --- */
+header, footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+header .container, footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo svg {
+    margin-right: 10px;
+}
+
+.motto {
+    font-style: italic;
+    font-weight: 300;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--dark-gray);
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--accent-orange);
+}
+
+/* --- Sections --- */
+section {
+    padding: 4rem 0;
+}
+
+section:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+h1, h2 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--white);
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-orange);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #e68a00; /* Darker orange */
+    transform: translateY(-2px);
+}
+
+/* --- Services Section --- */
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    flex-basis: 30%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+/* --- Contact Form --- */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-family);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-orange);
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+#form-status {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+.success {
+    color: #28a745;
+}
+.error {
+    color: #dc3545;
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .track-animation {
+        left: 2%; /* Move track for mobile view */
+    }
+    
+    .service-cards {
+        flex-direction: column;
+    }
+    
+    .card {
+        flex-basis: 100%;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
